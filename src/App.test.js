@@ -14,12 +14,14 @@ const findByTestAttr = (wrapper, val) => wrapper.find(`[data-test='${val}']`);
 
 test("renders without error", () =>{
   const wrapper = setup();
-  //use data test attribute to be more explicit
+  // //use data test attribute to be more explicit
   const appComponent = findByTestAttr(wrapper,"component-app")
-  //need this test to fail first
+  // //need this test to fail first
   expect(appComponent.length).toBe(1)
 
 });
+
+/*
 
 test("renders button", () =>{
   const wrapper = setup();
@@ -75,3 +77,5 @@ test("error if count goes below zero", () => {
   console.log(wrapper.debug());
   expect(errorHasHiddenClass).toBe(true);
 })
+
+*/
